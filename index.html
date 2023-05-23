@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="data.js"></script>
+    <script src="classes/Player.js"></script>
+    <script src="classes/Bullet.js"></script>
+    <script src="classes/Enemy.js"></script>
+
+</head>
+<style>
+    #main{
+        margin: auto;
+        text-align: center;
+        position: relative;
+    }
+    canvas {
+        background-image: url("assets/images/space.png");
+    }
+
+    #score {
+        position: absolute;
+        left: calc(50% - 200px);
+        top: 0;
+        color: #eaedef;
+        font-weight: bold;
+    }
+    #high-score {
+        position: absolute;
+        left: calc(50% + 130px);
+        top: 0;
+        color: #eaedef;
+        font-weight: bold;
+    }
+    #gameover {
+        background-color: rgba(128, 128, 128, 0.5);
+        padding: 25px;
+        border-radius: 10px;
+        position: absolute;
+        left: calc(50% - 50px);
+        top: calc(50% - 80px);
+        color: #eaedef;
+        font-weight: bold;
+    }
+    #level{
+        position: absolute;
+        left: calc(50% - 10px);
+        top: 0;
+        color: #eaedef;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div id="main">
+    <div id="score">
+        <p>Score</p>
+        <p id="score-txt">0</p>
+    </div>
+    <div id="high-score">
+        <p>HighScore</p>
+        <p id="highscore-txt">0</p>
+    </div>
+    <div id="gameover" style="display: none">
+        <p>Score</p>
+        <p id="score-end">0</p>
+        <button onclick="playAgain()">Play Again</button>
+    </div>
+    <div id="level">
+        <p>Level</p>
+        <p id="level-txt">0</p>
+    </div>
+    <canvas id="game" width="450" height="750">
+    </canvas>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
